@@ -24,6 +24,9 @@
     <None Remove="ClientApp\app\components\counter\**" />
     <None Remove="ClientApp\app\components\fetchdata\**" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="ClientApp\dist\vendor-manifest.json" />
+  </ItemGroup>
   <Target Name="RunWebpack" AfterTargets="ComputeFilesToPublish">
     <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
     <Exec Command="npm install" />
