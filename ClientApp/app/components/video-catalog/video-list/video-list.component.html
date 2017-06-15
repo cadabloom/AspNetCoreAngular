@@ -1,0 +1,24 @@
+﻿<h1>Video list</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+<p *ngIf="!videos"><em>Loading...</em></p>
+
+<a class="btn btn-primary" routerLink="/videos/new">Add video</a>
+
+<table class='table' *ngIf="videos">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let video of videos">
+            <td><a [routerLink]="[video.id]">{{video.title}}</a></td>
+            <td>{{ video.description }}</td>
+            <td><a [routerLink]="[video.id]">Edit</a> | <a href="javascript:" (click)="delete(video)">Delete</a></td>
+        </tr>
+    </tbody>
+</table>

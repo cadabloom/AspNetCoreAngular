@@ -1,0 +1,17 @@
+﻿<div class="row">
+    <div class="col-sm-8">
+        <h2>Form control: input</h2>
+        <p>The form below contains two input elements; one of type text and one of type password:</p>
+        <form>
+            <div class="form-group">
+                <label for="usr">Title:</label>
+                <input type="text" [(ngModel)]="video.title" class="form-control" name="title">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Description:</label>
+                <input type="text" [(ngModel)]="video.description" class="form-control" name="description">
+            </div>
+            <button type="submit" class="btn btn-primary" (click)="save(video)">Save</button>
+        </form>
+    </div>
+</div>
